@@ -1,0 +1,17 @@
+TO DO 2/13:
+Work on pandas or reading csv into python script So then can run all scrapers. I got pandas to work. DONE ish
+Schedule for each day (using cron job https://en.wikipedia.org/wiki/Cron#Predefined_scheduling_definitions ) 
+Postgres set up (http://newcoder.io/scrape/part-3/) 
+Throttling (being polite) setup  (https://www.scrapehero.com/how-to-prevent-getting-blacklisted-while-scraping/ )  I think I added this to ddascraper. 5 seconds wait in between each page request. DONE ish
+
+Feed back into final scraper either in array or using the csv STILL NEED TO DO
+
+What have I done, main docs:
+
+Step 1. DDAscraper.py: I go through array of all pages with all links (secPages) and I scrape out all links and write to a csv along with date time. 
+
+Step 2. Noselenium.py: I adjust url from DDAscraper so that from what I scrape on all pages with DDAscraper I get to the primary document and can then feed them all into xpathLoop. 
+
+Step 3. xpathLoop.py: I scrape the primary document and write into a csv names, company, file type, file id
+
+Step 4. Keywordtest.py: I use the names and companies I scraped from primary document in xpathLoop and I run a google search with them against certain words and I write to a csv those words and top 10 google searches (if that). 
